@@ -1,0 +1,103 @@
+*{
+	margin:  0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+header{
+	height: 100px;
+	width: 100%;
+	background-color: lightgrey;
+	overflow: hidden;
+	display: block;
+}
+
+#heading_Container{
+	margin-top: 25px;
+	margin-left: 35%;
+	margin-right: 50px;
+	margin-bottom: 25px;
+	width: 500px;
+	height: 50px;
+	display: block;
+	border-radius: 105px;
+	background: linear-gradient(to top, #E8E8E8	, #D3D3D3);
+}
+
+#heading_InnerContainer{
+	height: 100%;
+	width: 100%;
+	display: table;
+	float: left;
+}
+
+#main_Heading{
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.form_Container{
+	width: 80%;
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px; 
+}
+.form_fieldset{
+	padding: 20px;
+}
+
+label{
+	margin-left: 10px;
+	padding: 10px;
+	text-align: left;
+	font-family: "Times New Roman", Ariel;
+	font-size: 20px;
+}
+input{
+	width: 250px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: #E6E6FA;
+	border-style: solid;
+	border-width: 1px;	
+}
+#quantity_input{
+	width: 50px;
+}
+button{
+	width: 200px;
+	height: 40px;
+	margin-top:15px ;
+	margin-left: 20px;
+}
+#addToCart{
+	background-color: #c23616;
+	border-style:  none;
+	border-radius: 7px;
+	color: white ;
+	font-weight: bold;
+}
+
+.invoiceTable{
+	border-style: solid;
+	border-spacing: 10px;
+	border-width: 2px;
+	border-radius: 3px;
+	border-color:  black;
+	margin-left: 10px ;
+	padding: 5px;
+}
+
+td, th{
+	padding: 5px;
+	margin-right: 20px;
+	text-align: left;
+}
+th{
+	border-bottom: solid;
+	border-width: 1px;
+}
+

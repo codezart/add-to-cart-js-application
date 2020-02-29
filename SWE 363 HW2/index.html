@@ -1,0 +1,94 @@
+<!-- Mohammed Abdur Rahman 201626480-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping List</title>
+	<link rel="stylesheet" type="text/css" href="ShoppingListStyle.css">
+	<script src="ButtonOperations.js" async ></script>
+	<script src="Operations.js" async ></script>
+	<script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<header id="header" ><!-- header of the webpage, contains multiple divs for designing purposes -->
+		<div id="heading_Container">
+			<div id="heading_InnerContainer">
+				<h1 id="main_Heading">The Shopping List</h1>
+			</div>	
+		</div>	
+	</header><!-- /header -->
+
+	<section>	
+		<form class="form_Container" id="userDetails" name="userForm"><!--Form that holds user information -->
+			<fieldset class="form_fieldset">
+				<legend>Contact Details</legend>
+
+				<label>Name:</label> <input type="text/submit/hidden/button/etc"  id="userName" name="UserName" placeholder=" Enter your Name" required><!-- Name text field -->
+				
+				<br><br>	
+				
+				<label>Email:</label> <input type="email" name="email" id="userEmail"  placeholder=" Enter Email" required><!-- email text field-->
+
+			</fieldset>
+		</form>
+	
+		<form class="form_Container">
+			<fieldset class="form_fieldset">
+				<legend>Available Items</legend>
+
+				<label for="listItem"> Item: </label>
+
+				<select onclick ="userDetailsValidation()" onchange="priceValue()" type="list" id="select_Item" name="listItem">
+					<option value="none-selected">Select an Item</option>		
+					<option value="notebook">notebook</option>
+					<option value="Pencilbox">Pencilbox</option>
+					<option value="Tape">Tape</option>
+					<option value="eraser">eraser</option>
+					<option value="Lenovo Laptop">Lenovo Laptop</option>
+				</select>
+
+				<br><br>
+
+				<label>Price:</label> <input id="price_input" type="text/submit/hidden/button/etc" name="price" readonly>
+
+				<br><br>
+
+				<label>Quantity (between 1 and 5):</label> <input id="quantity_input" onclick ="userDetailsValidation()" onblur ="quantityValidator()" type="text/submit/hidden/button/etc" name="quantity" value="1">
+				
+				<br><br>
+					
+				<button id="addToCart" onclick="addCartItem()" type="button"> Add To Cart</button>
+			</fieldset>
+		</form>
+		
+		
+		<form class="form_Container" id="invoiceContainer">
+			<fieldset class="form_fieldset">
+				<legend>Invoice Details</legend>
+				<table class="invoiceTable">
+					<thead class= "table_headings">
+						<tr>
+							<th>Sr.</th>
+							<th>Item Name</th>
+							<th>Price</th>
+							<th>Quantity</th>
+							<th>Total</th>
+						</tr>
+					</thead>
+					<tbody class="cartItems">
+					</tbody>
+				</table>
+
+				<br><br>
+				
+				<label>Total Price:</label> <input id="totalPrice" type="text/submit/hidden/button/etc" name="Totalprice" readonly>
+				
+				<br><br>
+				
+				<button id="print_email" onclick="printandEmail('userDetails','invoiceContainer')" type="button"> Print and Send to Email</button>
+				
+			</fieldset>
+		</form>
+	</section>
+</body>
+</html>
